@@ -1,4 +1,4 @@
-package ex.chapter7;
+package ex.chapter8;
 
 import java.io.IOException;
 
@@ -8,11 +8,12 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  * Servlet implementation class FruitServlet
  */
-@WebServlet("/chapter7/FruitServlet")
+@WebServlet("/chapter8/FruitServlet")
 public class FruitServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -23,9 +24,10 @@ public class FruitServlet extends HttpServlet {
 		HttpServletResponse response) 
 		throws ServletException, IOException {
 		Fruit f = new Fruit("いちご", 700);
-		request.setAttribute("fruit", f);
+		HttpSession session = request.getSession();
+		session.setAttribute("fruit", f);
 		RequestDispatcher d = 
-			request.getRequestDispatcher("WEB-INF/ex/fruit.jsp");
+			request.getRequestDispatcher("../WEB-INF/ex/chapter8/fruit.jsp");
 		d.forward(request, response);
 	}
 

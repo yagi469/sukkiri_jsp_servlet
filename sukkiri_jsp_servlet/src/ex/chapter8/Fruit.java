@@ -1,4 +1,4 @@
-package ex.chapter7;
+package ex.chapter8;
 
 import java.io.Serializable;
 

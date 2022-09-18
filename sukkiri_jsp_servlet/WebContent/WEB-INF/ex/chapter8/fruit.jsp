@@ -1,6 +1,6 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
-<%@ page import="ex.chapter7.Fruit" %>
-<% Fruit fruit = (Fruit) request.getAttribute("fruit"); %>
+<%@ page import="ex.chapter8.Fruit" %>
+<% Fruit fruit = (Fruit) session.getAttribute("fruit"); %>
 <!DOCTYPE html>
 <html>
 <head>
