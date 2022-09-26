@@ -15,8 +15,8 @@ SiteEV siteEV = (SiteEV) application.getAttribute("siteEV");
 <p>
 <a href="/sukkiri_jsp_servlet/MinatoIndex?action=like">よいね</a>
 <%= siteEV.getLike() %>人
-<a href="/sukkiri_jsp_servlet/MinatoIndex?action=like">よいね</a>
-<%= siteEV.getLike() %>人
+<a href="/sukkiri_jsp_servlet/MinatoIndex?action=dislike">よいね</a>
+<%= siteEV.getDislike() %>人
 </p>
 <h2>湊くんとは！？</h2>
 <p>・・・</p>

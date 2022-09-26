@@ -9,5 +9,4 @@ public class SiteEVLogic {
 		int count = site.getDislike();
 		site.setDislike(count + 1);
 	}
-
 }
